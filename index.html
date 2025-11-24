@@ -1,57 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sorting Visualiser</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="container">
-    <h1>Sorting Visualiser</h1>
+  <h1>Sorting Visualiser</h1>
 
-    <section class="controls">
-      <div class="row">
-        <label>Algorithm:</label>
-        <select id="algorithm-select">
-          <option value="bubble">Bubble Sort</option>
-          <option value="insertion">Insertion Sort</option>
-          <option value="selection">Selection Sort</option>
-          <option value="merge">Merge Sort</option>
-          <option value="quick">Quick Sort</option>
-        </select>
+  <div class="controls">
+    <label>Algorithm:
+      <select id="algorithm-select">
+        <option value="bubble">Bubble Sort</option>
+        <option value="insertion">Insertion Sort</option>
+        <option value="selection">Selection Sort</option>
+      </select>
+    </label>
 
-        <label>Size:</label>
-        <input id="size-range" type="range" min="10" max="120" value="40" />
-        <span id="size-label">40</span>
+    <label>Size:
+      <input type="range" id="size-range" min="10" max="100" value="50">
+      <span id="size-label">50</span>
+    </label>
 
-        <label>Speed:</label>
-        <input id="speed-range" type="range" min="1" max="200" value="60" />
-        <span id="speed-label">60</span>
-      </div>
+    <label>Speed:
+      <input type="range" id="speed-range" min="1" max="200" value="50">
+      <span id="speed-label">50</span>
+    </label>
 
-      <div class="row buttons">
-        <button id="generate-btn">Generate Array</button>
-        <button id="start-btn">Start</button>
-        <button id="pause-btn" disabled>Pause</button>
-        <button id="reset-btn">Reset</button>
-      </div>
+    <button id="generate-btn">Generate Array</button>
+    <button id="start-btn">Start</button>
+    <button id="reset-btn">Reset</button>
+  </div>
 
-    </section>
-
-    <section id="visualiser" class="visualiser"></section>
-
-    <section class="legend">
-      <div><span class="legend-box active"></span> Active / comparing</div>
-      <div><span class="legend-box pivot"></span> Pivot</div>
-      <div><span class="legend-box sorted"></span> Sorted</div>
-    </section>
-
-    <footer>
-      <a href="https://github.com/" target="_blank" rel="noopener">Hosted on GitHub Pages</a>
-    </footer>
-  </main>
+  <div id="visualiser" class="visualiser"></div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
