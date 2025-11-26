@@ -1,140 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Projects by Freddie</title>
-  <style>
-  /* Existing styles for body, header, etc. remain */
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-  /* Section styling */
-  .section-page {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      line-height: 1.6;
-      background: #fafafa;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      position: relative; /* needed for back button absolute positioning */
-  }
 
-  .section-page h1 {
-      font-size: 2.5rem;
-      color: #1e1e1e;
-      margin-bottom: 20px;
-  }
+.project-title {
+font-size: 1.3rem;
+margin-bottom: 10px;
+font-weight: 600;
+}
 
-  .section-page h2 {
-      font-size: 2rem;
-      color: #333;
-      margin-top: 30px;
-      margin-bottom: 15px;
-  }
 
-  .section-page p {
-      font-size: 1.05rem;
-      color: #555;
-      margin-bottom: 15px;
-  }
+.project-desc {
+font-size: 0.95rem;
+opacity: 0.8;
+}
 
-  /* Back button styling */
-  .back-btn {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      padding: 10px 18px;
-      font-size: 1rem;
-      background: #007acc;
-      color: white;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      transition: 0.2s;
-  }
 
-  .back-btn:hover {
-      background: #005f99;
-  }
+footer {
+text-align: center;
+margin-top: 40px;
+padding: 20px;
+color: #555;
+}
 </style>
 </head>
 <body>
-  <header>My Projects by Freddie</header>
+<header>My Projects by Freddie</header>
 
-  <!-- Main menu -->
-  <div class="projects-container" id="main-menu">
-    <div class="project-card" onclick="openSection('ai')">
-      <div class="project-title">AI & Automation</div>
-      <div class="project-desc">Explore bots and intelligent systems.</div>
-    </div>
 
-    <div class="project-card" onclick="openSection('web')">
-      <div class="project-title">Web Development</div>
-      <div class="project-desc">Interactive sites, tools, and UI experiments.</div>
-    </div>
+<!-- Main menu -->
+<div class="projects-container" id="main-menu">
+<div class="project-card" onclick="openSection('ai')">
+<div class="project-title">AI & Automation</div>
+<div class="project-desc">Explore projects involving bots and intelligent systems.</div>
+</div>
 
-    <div class="project-card" onclick="openSection('python')">
-      <div class="project-title">Python Projects</div>
-      <div class="project-desc">Scripts, data tools, and creative Python apps.</div>
-    </div>
-  </div>
 
-  <!-- Section pages -->
-  <div id="ai" class="section-page" style="display:none; padding:30px;">
-    <button class="back-btn" onclick="goBack()">← Back</button>
-    <h2>Fundamentals of Machine Learning & Artificial Intelligence</h2>
-    <p>Artificial Intelligence is the general area of research dedicated to the creation of systems able to do things that would need human intelligence: things like pattern recognition, understanding language, or making decisions and learning from experience. Machine Learning is a major sub-area of AI whose aim is to enable improvement in the performance of computers over time without necessarily being explicitly programmed. Rather than write step-by-step instructions, we give the computer data and it learns patterns within that data in order to make predictions or decisions.
+<div class="project-card" onclick="openSection('web')">
+<div class="project-title">Web Development</div>
+<div class="project-desc">Interactive sites, tools, and UI experiments.</div>
+</div>
+
+
+<div class="project-card" onclick="openSection('python')">
+<div class="project-title">Python Projects</div>
+<div class="project-desc">Scripts, data tools, and creative Python apps.</div>
+</div>
+</div>
+
+
+<!-- Section pages -->
+<div id="ai" class="section-page" style="display:none; padding:30px;">
+<button class="back-btn" onclick="goBack()">← Back</button>
+<h2>Fundamentals of Machine Learning & Artificial Intelligence</h2>
+<p>Artificial Intelligence is the general area of research dedicated to the creation of systems able to do things that would need human intelligence: things like pattern recognition, understanding language, or making decisions and learning from experience. Machine Learning is a major sub-area of AI whose aim is to enable improvement in the performance of computers over time without necessarily being explicitly programmed. Rather than write step-by-step instructions, we give the computer data and it learns patterns within that data in order to make predictions or decisions.
 Model training is the very essence of machine learning. In brief, the model is a mathematical description of any system that attempts to map inputs to outputs. During training, it is exposed to many examples-images, texts, numbers, or even sounds-in which it generalizes patterns and adjusts inner parameters with the view of minimizing errors. Gradually, the model develops the ability to find relations; it gets better with practice, just like humans.
 Major types of machine learning include the following: In supervised learning, the data used is labeled; each example comes with an accompanying correct label. This is quite common in classification tasks such as image classification, spam detection, etc. Unsupervised learning operates on unlabelled data, and as such, lets the system find hidden structures such as groups or patterns by itself. Another approach is reinforcement learning wherein an agent interacts with an environment and learns through feedback in the form of rewards or penalties, drawing inspiration from behaviors and rewards.
 Modern AI, including deep learning, is based on neural networks or layered systems, drawing a great deal of inspiration from the structure of the human brain. They achieve outstanding performance in complicated pattern recognition from large data sets-a non-trivial enabling factor for breakthrough applications such as image recognition, speech processing, autonomous driving, and natural language understanding.
 All in all, machine learning and AI are the powerful technologies that convert data into intelligent behavior for much of the technology with which we interact on a daily basis. As these technologies continue to evolve, new opportunities in automation, creativity, and problem-solving proliferate into nearly every industry.</p>
-  </div>
+</div>
 
-  <div id="web" class="section-page" style="display:none; padding:30px;">
-    <button class="back-btn" onclick="goBack()">← Back</button>
-    <h2>Web Development</h2>
-    <p>Websites and interactive tools built using HTML, CSS and JavaScript.</p>
-  </div>
 
-  <div id="python" class="section-page" style="display:none; padding:30px;">
-    <button class="back-btn" onclick="goBack()">← Back</button>
-    <h2>Python Projects</h2>
-    <p>Useful scripts, fun tools, and experiments written in Python.</p>
-  </div>
+<div id="web" class="section-page" style="display:none; padding:30px;">
+<button class="back-btn" onclick="goBack()">← Back</button>
+<h2>Web Development</h2>
+<p>Websites and interactive tools built using HTML, CSS and JavaScript.</p>
+</div>
 
-  <footer>© 2025 Freddie — Hosted on GitHub Pages</footer>
 
-  <style>
-    .back-btn {
-      padding: 8px 16px;
-      border: none;
-      background: #222;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
-    .back-btn:hover {
-      background: #444;
-    }
-    .section-page h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-  </style>
+<div id="python" class="section-page" style="display:none; padding:30px;">
+<button class="back-btn" onclick="goBack()">← Back</button>
+<h2>Python Projects</h2>
+<p>Useful scripts, fun tools, and experiments written in Python.</p>
+</div>
 
-  <script>
-    function openSection(id) {
-      document.getElementById('main-menu').style.display = 'none';
-      document.getElementById(id).style.display = 'block';
-    }
 
-    function goBack() {
-      document.querySelectorAll('.section-page').forEach(p => p.style.display = 'none');
-      document.getElementById('main-menu').style.display = 'grid';
-    }
-  </script>
+<footer>© 2025 Freddie — Hosted on GitHub Pages</footer>
+
+
+<style>
+.back-btn {
+padding: 8px 16px;
+border: none;
+background: #222;
+color: white;
+border-radius: 8px;
+cursor: pointer;
+font-size: 1rem;
+margin-bottom: 20px;
+}
+.back-btn:hover {
+background: #444;
+}
+.section-page h2 {
+font-size: 2rem;
+margin-bottom: 10px;
+}
+</style>
+
+
+<script>
+function openSection(id) {
+document.getElementById('main-menu').style.display = 'none';
+document.getElementById(id).style.display = 'block';
+}
+
+
+function goBack() {
+document.querySelectorAll('.section-page').forEach(p => p.style.display = 'none');
+document.getElementById('main-menu').style.display = 'grid';
+}
+</script>
 </body>
 </html>
-
