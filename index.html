@@ -74,8 +74,23 @@ color: #555;
 <header>My Projects by Freddie</header>
 
 
-<div class="projects-container" id="projects">
-<!-- JS will inject project cards here -->
+<div class="projects-container">
+<div class="project-card" onclick="window.open('https://github.com/yourusername/project1','_blank')">
+<div class="project-title">AI & Automation</div>
+<div class="project-desc">Projects related to automation, bots, and machine learning.</div>
+</div>
+
+
+<div class="project-card" onclick="window.open('https://github.com/yourusername/project2','_blank')">
+<div class="project-title">Web Development</div>
+<div class="project-desc">Websites, tools, and interactive demos built with HTML/CSS/JS.</div>
+</div>
+
+
+<div class="project-card" onclick="window.open('https://github.com/yourusername/project3','_blank')">
+<div class="project-title">Python Projects</div>
+<div class="project-desc">Python apps, data tools, and scripts showcasing coding ability.</div>
+</div>
 </div>
 
 
@@ -83,31 +98,7 @@ color: #555;
 
 
 <script>
-// Example project list. Add your own below!
-const projects = [
-{
-title: "Piano Tiles Bot",
-desc: "Python bot that plays piano tiles automatically.",
-link: "https://github.com/yourusername/project1"
-},
-{
-title: "Portfolio Website",
-desc: "This website showcasing my projects.",
-link: "https://github.com/yourusername/project2"
-},
-{
-title: "Data Visualisation Tool",
-desc: "A small data analysis & charting demo.",
-link: "https://github.com/yourusername/project3"
-}
-];
-
-
-const container = document.getElementById("projects");
-
-
-projects.forEach(p => {
-const card = document.createElement("div");
-card.className = "project-card";
-card.onclick = () => window.open(p.link, "_blank");
+// JavaScript not required for static clickable sections
+</script>
+</body>
 </html>
