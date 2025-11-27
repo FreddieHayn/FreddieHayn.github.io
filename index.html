@@ -161,13 +161,30 @@
   <!-- Mathematics Section -->
   <div id="math" class="section-page">
     <button class="back-btn" onclick="goBack()">← Back</button>
-    <h1>Mathematics Fundamentals</h1>
-    <img src="images/coil.jfif" alt="Vector Addition Diagram">
-    <h2>Linear Algebra</h2>
-    <p>Linear algebra studies vectors, matrices, and linear transformations. It forms the backbone for many applications in physics, engineering, computer graphics, and AI.</p>
-    <h2>Vectors</h2>
-    <p>Vectors are quantities with magnitude and direction. They are essential for representing forces, motion, and positions in space, and are widely used in simulations and modeling.</p>
+    <div class="project-card" onclick="openSection('vectors')">
+      <div class="project-title">Vectors</div>
+      <div class="project-desc">Learn about vectors</div>
+    </div>
+  <div class="project-card" onclick="openSection('la')">
+      <div class="project-title">Linear Algebra</div>
+      <div class="project-desc">Learn about linear algebra,</div>
+    </div>
+  <div class="project-card" onclick="openSection('integration')">
+      <div class="project-title">Integration</div>
+      <div class="project-desc">Learn about integration</div>
+    </div>
+  <div class="project-card" onclick="openSection('differentiation')">
+      <div class="project-title">Mathematics</div>
+      <div class="project-desc">Learn about differentiation</div>
+    </div>
   </div>
+
+  <div id="vectors" class="section-page">
+    <button class="back-btn" onclick="goBack()">← Back</button> 
+    <h1>Vectors</h1>
+    <p>Hello this is about vectors</p>
+
+  
 
   <!-- Physics Section -->
   <div id="physics" class="section-page">
