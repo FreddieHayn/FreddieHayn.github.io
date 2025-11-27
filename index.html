@@ -210,14 +210,23 @@
 
   <script>
     function openSection(id) {
-      document.querySelectorAll('.section-page').forEach(section => {
+  // Hide all section pages
+  document.querySelectorAll('.section-page').forEach(section => {
     section.style.display = 'none';
   });
-    }
 
-     function openSectionInner(id) {
-       document.getElementById('main-menu').style.display = 'none';
-      document.getElementById(id).style.display = 'block';
+  // Hide subtopic pages (if you have them)
+  document.querySelectorAll('.subtopic-page').forEach(sub => {
+    sub.style.display = 'none';
+  });
+
+  // Hide main menu
+  document.getElementById('main-menu').style.display = 'none';
+
+  // Show the clicked page
+  document.getElementById(id).style.display = 'block';
+  }
+
      }
     function goBack() {
       document.querySelectorAll('.section-page').forEach(p => p.style.display = 'none');
