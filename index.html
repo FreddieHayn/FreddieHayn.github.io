@@ -126,22 +126,22 @@
 
   <!-- Homepage -->
   <div class="projects-container" id="main-menu">
-    <div class="project-card" onclick="openSection('ai')">
+    <div class="project-card" onclick="openPage('ai')">
       <div class="project-title">Computer Science</div>
       <div class="project-desc">Explore intelligent systems, automation, and fundamentals.</div>
     </div>
 
-    <div class="project-card" onclick="openSection('math')">
+    <div class="project-card" onclick="openPage('math')">
       <div class="project-title">Mathematics</div>
       <div class="project-desc">Learn about linear algebra, vectors, and other essential maths topics.</div>
     </div>
 
-    <div class="project-card" onclick="openSection('physics')">
+    <div class="project-card" onclick="openPage('physics')">
       <div class="project-title">Physics</div>
       <div class="project-desc">Explore waves, energy, and physics concepts in a simple way.</div>
     </div>
 
-    <div class="project-card" onclick="openSection('projects')">
+    <div class="project-card" onclick="openPage('projects')">
       <div class="project-title">My Projects</div>
       <div class="project-desc">A collection of coding, maths, and physics projects.</div>
     </div>
@@ -161,19 +161,19 @@
   <!-- Mathematics Section -->
   <div id="math" class="section-page">
     <button class="back-btn" onclick="goBack()">← Back</button>
-    <div class="project-card" onclick="openSection('vectors')">
+    <div class="project-card" onclick="openPage('vectors')">
       <div class="project-title">Vectors</div>
       <div class="project-desc">Learn about vectors</div>
     </div>
-  <div class="project-card" onclick="openSection('la')">
+  <div class="project-card" onclick="openPage('la')">
       <div class="project-title">Linear Algebra</div>
       <div class="project-desc">Learn about linear algebra,</div>
     </div>
-  <div class="project-card" onclick="openSection('integration')">
+  <div class="project-card" onclick="openPage('integration')">
       <div class="project-title">Integration</div>
       <div class="project-desc">Learn about integration</div>
     </div>
-  <div class="project-card" onclick="openSection('differentiation')">
+  <div class="project-card" onclick="openPage('differentiation')">
       <div class="project-title">Differentiation</div>
       <div class="project-desc">Learn about differentiation</div>
     </div>
@@ -210,13 +210,13 @@
 
   <script>
     function openPage(id) {
-    document.querySelectorAll('.section-page, .subtopic-page, .main-menu').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.section-page, .subtopic-page, .projects-container').forEach(p => p.style.display = 'none');
     document.getElementById(id).style.display = 'block';
     }
 
      
     function goBack() {
-      document.querySelectorAll('.section-page').forEach(p => p.style.display = 'none');
+      document.querySelectorAll('.section-page, .subtopic-page').forEach(p => p.style.display = 'none');
       document.getElementById('main-menu').style.display = 'grid';
     }
   </script>
