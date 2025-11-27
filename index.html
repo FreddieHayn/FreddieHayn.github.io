@@ -174,7 +174,7 @@
       <div class="project-desc">Learn about integration</div>
     </div>
   <div class="project-card" onclick="openSection('differentiation')">
-      <div class="project-title">Mathematics</div>
+      <div class="project-title">Differentiation</div>
       <div class="project-desc">Learn about differentiation</div>
     </div>
   </div>
@@ -210,10 +210,15 @@
 
   <script>
     function openSection(id) {
-      document.getElementById('main-menu').style.display = 'none';
-      document.getElementById(id).style.display = 'block';
+      document.querySelectorAll('.section-page').forEach(section => {
+    section.style.display = 'none';
+  });
     }
 
+     function openSectionInner(id) {
+       document.getElementById('main-menu').style.display = 'none';
+      document.getElementById(id).style.display = 'block';
+     }
     function goBack() {
       document.querySelectorAll('.section-page').forEach(p => p.style.display = 'none');
       document.getElementById('main-menu').style.display = 'grid';
