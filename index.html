@@ -209,23 +209,10 @@
   <footer>© 2025 Freddie — Learning Hub</footer>
 
   <script>
-    function openSection(id) {
-  // Hide all section pages
-  document.querySelectorAll('.section-page').forEach(section => {
-    section.style.display = 'none';
-  });
-
-  // Hide subtopic pages (if you have them)
-  document.querySelectorAll('.subtopic-page').forEach(sub => {
-    sub.style.display = 'none';
-  });
-
-  // Hide main menu
-  document.getElementById('main-menu').style.display = 'none';
-
-  // Show the clicked page
-  document.getElementById(id).style.display = 'block';
-  }
+    function openPage(id) {
+    document.querySelectorAll('.section-page, .subtopic-page').forEach(p => p.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+    }
 
      }
     function goBack() {
